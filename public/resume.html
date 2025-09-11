@@ -1,0 +1,751 @@
+<!doctype html>
+<html>
+	<head>
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
+	
+	<title>Sayef Azad Sakin</title>
+
+	<style>
+	@font-face {
+    font-family: 'LatoFont'; /*a name to be used later*/
+    src: url('/mnt/d/Projects/personal-web-demo/public/font/font.ttf'); /*URL to font*/
+}
+
+body {
+    background: #EEEEEE;
+    font: 13px "", Times, sans-serif;
+    line-height: 1.4;
+    margin: 30px 0;
+    font-family: 'LatoFont', Arial, sans-serif;
+}
+
+em {
+    color: #999;
+}
+
+p {
+    line-height: 1.4;
+}
+
+ul {
+    margin-bottom: 0;
+}
+
+li {
+    margin-bottom: 2px;
+}
+
+a {
+    text-decoration: none;
+}
+
+#resume {
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 80px 80px;
+    background: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 4px #aaa;
+    -webkit-box-shadow: 2px 2px 4px #aaa;
+}
+
+.headerBlock {
+    margin-bottom: 5px;
+    display: inline-flex;
+    width: 100%;
+}
+
+.contactBlock {
+    vertical-align: top;
+    margin-left: 0;
+    margin-right: auto;
+    text-align: left;
+    width: 30%;
+}
+
+.nameBlock {
+    vertical-align: top;
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.profileBlock {
+    vertical-align: top;
+    margin-left: auto;
+    margin-right: 0;
+    text-align: right;
+    width: 30%;
+}
+
+.name {
+    font-weight: bold;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+.nameBlockLabel {
+    font-size: 18px;
+}
+
+.coursesList {
+    width: 28%;
+    vertical-align: top;
+    display: inline-block;
+}
+
+.largeFont {
+    font-size: 20px;
+}
+
+.smallFont {
+    font-size: 13px;
+}
+
+.sectionBlock {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.sectionName {
+    width: 100%;
+    vertical-align: top;
+    display: inline-block;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 0;
+    text-decoration: underline;
+    /* border-bottom: 2px dashed #000;
+    padding-bottom: 5px; */
+}
+
+/* .sectionName::span {
+  font-size: 3em;
+  font-weight: bold;
+} */
+
+.normalLink {
+    color: #000000;
+}
+
+.socialLogo {
+    width: 15px;
+    height: 15px;
+    object-fit: cover;
+    vertical-align: middle;
+    filter: brightness(0); /* For pure black */
+}
+
+.sectionContent {
+    width: 100%;
+    vertical-align: top;
+    display: inline-block;
+}
+
+.sectionContent ul {
+    padding-left: 20px;
+    margin-top: 0;
+    list-style-type: circle;
+}
+
+.sectionContent .title {
+    font-weight: bold;
+}
+
+.sectionContent .date {
+    float: right;
+}
+
+.sectionContent .separator {
+    height: 5px;
+}
+
+.sectionLine {
+    border-style: dashed;
+    border-width: 1px;
+    border-color: #1e1e1e;
+}
+
+.divider {
+    font-weight: bold;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.educationBlock {
+    display: flex;
+}
+
+.educationDate {
+    font-size: x-small;
+    color: #000000;
+    margin-top: 2px;
+    margin-right: auto;
+    margin-left: 0;
+    text-align: right;
+    align-items: right;
+    font-style: normal;
+    width: 17%;
+}
+
+.educationDetails {
+    margin-left: auto;
+    margin-right: 0;
+    margin-top: 0;
+    padding-left: 8px;
+    width: 83%;
+    display: block;
+    text-align: left;
+    align-items: left;
+}
+
+.highlights {
+    font-size: small;
+}
+
+li::marker {
+    content: "◇ "; /* Adds a star emoji before each list item */
+}
+
+.summary {
+    margin-top: 6px;
+}
+
+.skillBlock {
+    margin-bottom: 4px;
+}
+
+.jobBlock {
+    page-break-inside: avoid;
+}
+
+.description {
+    text-align: justify;
+}
+
+blockquote.reference {
+    margin: 0;
+    margin-bottom: 1em;
+}
+
+.authors {
+    font-size: xx-small;
+}
+.publisher {
+    font-size: x-small;
+    font-style: italic;
+}
+
+.workDetails {
+    font-size: x-small;
+}
+/* Media Queries */
+
+@media only screen and (max-width: 40em) {
+    body {
+        margin: 0;
+        font-size: 14px;
+    }
+    #resume {
+        margin: 0 auto;
+        max-width: 600px;
+        padding: 0.5em 1em;
+        border: none;
+    }
+    .sectionBlock {
+        flex-direction: column;
+    }
+    .sectionContent {
+        width: 100%;
+    }
+    .sectionContent .date {
+        padding-right: 2em;
+    }
+    .sectionName {
+        width: auto;
+    }
+    .largeFont {
+        font-size: 20px;
+    }
+    .smallFont {
+        font-size: 14px;
+    }
+}
+
+@media print {
+    body {
+        background: #FFFFFF;
+    }
+    #resume {
+        margin: 0 auto;
+        max-width: 600px;
+        padding: 0px 0px;
+        border: 0px;
+        background: #fff;
+        box-shadow: none;
+        -webkit-box-shadow: none;
+        /* break-after: avoid;
+        break-before: avoid; */
+        break-inside: avoid;
+        /* page-break-inside: avoid; */
+    }
+    .separator {
+        break-after: always;
+    }
+    /* a {
+        color: black;
+    } */
+}
+	</style>
+	
+	</head>
+	<body>
+	
+	<div id="resume">
+		<div id='basicsBlock' class='headerBlock'>
+			<div class='contactBlock'>
+				<div class='phone'>
+					<img class='socialLogo' src='https://upload.wikimedia.org/wikipedia/commons/6/6c/Phone_icon.png' alt=''/> (520)448-8596
+				</div>
+				<div class='address'>
+					 <img class='socialLogo' src='https://upload.wikimedia.org/wikipedia/commons/3/30/Home_free_icon.svg' alt=''/> SLC, Utah, US
+				</div>
+				<div class='email'>
+					sayefsakin@sci.utah.edu
+				</div>
+			</div>
+			<div id='nameBlock' class='nameBlock'>
+				<div class='name'>
+					Sayef Azad Sakin
+				</div>
+				<div class='nameBlockLabel'>Graduate Research Assistant</div>
+			</div>
+			<div id='profilesBlock' class='profileBlock'>
+				<div class='url'>
+					<a href='https://github.com/sayefsakin' target='__blank'>
+						<img class='socialLogo' src='https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg' alt='GitHub'/> sayefsakin
+					</a>
+				</div>
+				<div class='url'>
+					<a href='https://linkedin.com/in/sasakin' target='__blank'>
+						<img class='socialLogo' src='https://upload.wikimedia.org/wikipedia/commons/e/e8/Linkedin-logo-blue-In-square-40px.png' alt='LinkedIn'/> sasakin
+					</a>
+				</div>
+				<div class='url'>
+					<a href='https://sayefsakin.github.io' target='__blank'>
+						<img class='socialLogo' src='https://upload.wikimedia.org/wikipedia/commons/d/d9/Noun_project_Globe_icon_1109009.svg' alt='Blog'/> sayefsakin
+					</a>
+				</div>
+			</div>
+		</div>
+		
+		
+		<div id='summaryBlock' class="sectionBlock">
+			<div class='sectionName'>
+				RESEARCH INTERESTS
+			</div>
+			<div class='sectionContent'>
+				<span>Data Visualization, Parallel &amp; Distributed Computing, High Performance Computing, Data Management</span>
+			</div>
+		</div>
+		<div id='projectsBlock' class="sectionBlock">
+			<div class='sectionName'>
+				<span>RESEARCH PROJECTS</span>
+			</div>
+			<div class='sectionContent'>
+				<div class='educationBlock'>
+					<div class='educationDate'>
+						Dec 2023 - Present
+					</div>
+					<div class="educationDetails">
+						<div>
+							<a href='https://github.com/sayefsakin/eseman' target='__blank'>
+								ESeMan</a>, <span style='font-size:x-small'>an Event Sequence MANager for interactive visual analysis of events with tunable accuracy</span>
+						</div>
+						<ul class='highlights'>
+							<li>Developed a data management system to address the challenge of balancing interactive performance and visual accuracy in visualizing large number of events.</li>
+							<li>Built interfacing to generate event summaries with varying visual accuracy.</li>
+							<li>Achieved sub-100ms interactive response time while maintaining pixel-perfect visual accuracy.</li>
+							<li>Published the results of this project as a full paper at IEEE LDAV 2025 workshop.</li>
+						</ul>
+					</div>
+				</div>
+				<div class='separator'></div>
+				<div class='educationBlock'>
+					<div class='educationDate'>
+						Aug 2019 - Present
+					</div>
+					<div class="educationDetails">
+						<div>
+							<a href='https://github.com/sayefsakin/traveler-integrated/tree/data-structure-comp' target='__blank'>
+								Traveler</a>, <span style='font-size:x-small'>an integrated multi-view visualization platform for analyzing parallel program traces</span>
+						</div>
+						<ul class='highlights'>
+							<li>Developed a visualization system to analyze trace data collected from a distributed array toolkit running a C++ runtime system.</li>
+							<li>Designed web-based interactive node-link diagram, scalable time-series charts, and RESTful API backend.</li>
+							<li>Enable faster navigation on large traces and easier identification of performance bottlenecks through interactive visualizations.</li>
+							<li>Published a full paper (IEEE VIS 2022), a short paper (IEEE VIS 2024), and three workshop papers based on the results of this project.</li>
+						</ul>
+					</div>
+				</div>
+				<div class='separator'></div>
+				<div class='educationBlock'>
+					<div class='educationDate'>
+						Jun 2024 - Present
+					</div>
+					<div class="educationDetails">
+						<div>
+							<a href='https://github.com/sayefsakin/dsi/tree/main/tools/perf_analyzer' target='__blank'>
+								PerfAnalyzer</a>, <span style='font-size:x-small'>a web-based dashboard to correlate performance changes to source code modifications</span>
+						</div>
+						<ul class='highlights'>
+							<li>Developed a web-based dashboard, using Plotly and DASH, to correlate scientific software performance changes with source code modifications.</li>
+							<li>Built an interfacing with MySQL database that enabled a flexible performance data storage with user-friendly query interface.</li>
+							<li>Faciliatated automated performance data collection from multiple Git commits with different input configurations.</li>
+							<li>Submitted a short paper at the PMBS 2025 workshop highlighting the benefits of integrating Git metadata in the performance analysis workflow.</li>
+						</ul>
+					</div>
+				</div>
+				<div class='separator'></div>
+				<div class='educationBlock'>
+					<div class='educationDate'>
+						Jun 2022 - Aug 2023
+					</div>
+					<div class="educationDetails">
+						<div>
+							<a href='https://github.com/pnnl/ExaGO/tree/develop/performance_analysis' target='__blank'>
+								AutoProfiler</a>, <span style='font-size:x-small'>a scripting tool for performance profiling of supercomputing applications</span>
+						</div>
+						<ul class='highlights'>
+							<li>Automated the overall performance analysis pipeline of the <a href='https://github.com/pnnl/ExaGO' targe='__blank'>ExaGO</a>, a collection of software packages for solving power grid optimization problems.</li>
+							<li>Enabled multi-platform (CPU, GPU) profiling by easy integration with TAU, HPCToolkit, and Nvidia Nsight.</li>
+							<li>Enabled easy configuration of different profiling setups and software versions leveraging the Spack package manager.</li>
+							<li>Designed scripts to estimate the strong and weak scaling measurements of ExaGO on different Supercomputing platforms.</li>
+							<li>Presented a poster on the impacts of this project at the ECP23 annual meeting.</li>
+						</ul>
+					</div>
+				</div>
+				<div class='separator'></div>
+			</div>
+		</div>
+		<div id='skills' class="sectionBlock">
+			<div class='sectionName'>
+				<div>TECHNICAL SKILLS</div>
+			</div>
+			<div class='sectionContent'>
+				<div style="font-size:xx-small; text-align: center;" >(Left to Right - Highest to Lowest Proficiency)</div>
+				<div class='skillBlock'>
+					<span class='title'>Programming Languages:</span>
+					<span>Python</span>, 
+					<span>C</span>, 
+					<span>C++</span>, 
+					<span>BASH</span>, 
+					<span>SQL</span>, 
+					<span>Javascript</span>, 
+					<span>Java</span>, 
+					<span>Objective C</span>
+				</div>
+				<div class='skillBlock'>
+					<span class='title'>Data Analysis Packages:</span>
+					<span>NumPy</span>, 
+					<span>Pandas</span>, 
+					<span>CGAL</span>, 
+					<span>SciPy</span>, 
+					<span>scikit-learn</span>, 
+					<span>MATLAB</span>
+				</div>
+				<div class='skillBlock'>
+					<span class='title'>Visualization Tools:</span>
+					<span>D3.js</span>, 
+					<span>Plotly</span>, 
+					<span>Dash</span>, 
+					<span>Matplotlib</span>, 
+					<span>Seaborn</span>, 
+					<span>ggplot2</span>
+				</div>
+			</div>
+		</div>
+		<div id='education' class="sectionBlock">
+			<div class='sectionName'>
+				<span>EDUCATION</span>
+			</div>
+			<div class='sectionContent'>
+				<div class='educationBlock'>
+					<div class='educationDate'>
+						Aug 2022 - Present<br/>Expected Fall 2025
+					</div>
+					<div class="educationDetails">
+						<div class=''>
+							<span style="font-weight: bold;">Ph.D.</span>  in Computing, GPA: 4.00/4.00
+						</div>
+						<div class=''>
+							School of Computing, University of Utah, USA
+						</div>
+						<div>
+							Thesis: Event Sequence Visualization: Design Considerations and Data Management Techniques</br>Advisor: <a href='https://scholar.google.com/citations?user=sYt1rjsAAAAJ' target='__blank'>Katherine E. Isaacs</a>
+						</div>
+						
+					</div>
+				</div>
+				<div class='separator'></div>
+				<div class='educationBlock'>
+					<div class='educationDate'>
+						Jan 2014 - May 2016
+					</div>
+					<div class="educationDetails">
+						<div class=''>
+							<span style="font-weight: bold;">Master of Science</span>  in Computer Science &amp; Engineering, GPA: 3.65/4.00
+						</div>
+						<div class=''>
+							Department of Computer Science &amp; Engineering, University of Dhaka, Bangladesh
+						</div>
+						<div>
+							Thesis: Game Theoretic Downlink Resource Scheduling in Self-coexisting Cognitive Radio Networks</br>Advisor: <a href='https://scholar.google.com/citations?user=1yMUb7wAAAAJ'  target='__blank'>Md. Abdur Razzaque</a>
+						</div>
+						
+					</div>
+				</div>
+				<div class='separator'></div>
+				<div class='educationBlock'>
+					<div class='educationDate'>
+						Jan 2009 - Aug 2013
+					</div>
+					<div class="educationDetails">
+						<div class=''>
+							<span style="font-weight: bold;">Bachelor of Science</span>  in Computer Science &amp; Engineering, GPA: 3.63/4.00
+						</div>
+						<div class=''>
+							Department of Computer Science &amp; Engineering, University of Dhaka, Bangladesh
+						</div>
+						<div>
+							Thesis: A Distributed Algorithm for Generating Prime Numbers using MapReduce</br>Advisor: <a href='https://scholar.google.fr/citations?user=-P-CCEQAAAAJ'  target='__blank'>Syed Faisal Hasan</a>
+						</div>
+						
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		<div id='publications' class="sectionBlock">
+			<div class='sectionName'>
+				<span>RESEARCH PUBLICATIONS</span>
+			</div>
+			<div class='sectionContent'>
+				<div class='educationBlock'>
+					<div class='educationDate'>
+						2025
+					</div>
+					<div class="educationDetails">
+						<div>
+							Managing Data for Scalable and Interactive Event Sequence Visualization
+							 (<a class='normalLink' href='https://arxiv.org/abs/2508.03974' target='__blank'>Read↗</a>)
+						</div>
+						<div class="publisher">The 15th IEEE Workshop on Large Data Analysis and Visualization (LDAV)</div>
+						<div class="authors"><b>Sayef Azad Sakin</b>, Katherine E. Isaacs</div>
+						
+		
+					</div>
+				</div>
+				<div class='separator'></div>
+				<div class='educationBlock'>
+					<div class='educationDate'>
+						2024
+					</div>
+					<div class="educationDetails">
+						<div>
+							A Literature-based Visualization Task Taxonomy for Gantt Charts
+							 (<a class='normalLink' href='https://ieeexplore.ieee.org/abstract/document/10771138/' target='__blank'>Read↗</a>)
+						</div>
+						<div class="publisher">IEEE Visualization and Visual Analytics (VIS)</div>
+						<div class="authors"><b>Sayef Azad Sakin</b>, Katherine E. Isaacs</div>
+						
+		
+					</div>
+				</div>
+				<div class='separator'></div>
+				<div class='educationBlock'>
+					<div class='educationDate'>
+						2022
+					</div>
+					<div class="educationDetails">
+						<div>
+							Traveler: Navigating Task Parallel Traces for Performance Analysis
+							 (<a class='normalLink' href='https://ieeexplore.ieee.org/abstract/document/9904447/' target='__blank'>Read↗</a>)
+						</div>
+						<div class="publisher">IEEE Visualization and Visual Analytics (VIS)</div>
+						<div class="authors"><b>Sayef Azad Sakin</b>, Alex Bigelow, R Tohid, Connor Scully-Allison, Carlos Scheidegger, Steven R Brandt, Christopher Taylor, Kevin A Huck, Hartmut Kaiser, Katherine E Isaacs</div>
+						
+		
+					</div>
+				</div>
+				<div class='separator'></div>
+				<div class='educationBlock'>
+					<div class='educationDate'>
+						2022
+					</div>
+					<div class="educationDetails">
+						<div>
+							Halide Code Generation Framework in Phylanx
+							 (<a class='normalLink' href='https://link.springer.com/chapter/10.1007/978-3-031-31209-0_3' target='__blank'>Read↗</a>)
+						</div>
+						<div class="publisher">Euro-Par 2022: Parallel Processing Workshops</div>
+						<div class="authors">R Tohid, Shahrzad Shirzad, Christopher Taylor, <b>Sayef Azad Sakin</b>, Katherine E Isaacs, Hartmut Kaiser</div>
+						
+		
+					</div>
+				</div>
+				<div class='separator'></div>
+				<div class='educationBlock'>
+					<div class='educationDate'>
+						2020
+					</div>
+					<div class="educationDetails">
+						<div>
+							Distributed Asynchronous Array Computing with the JetLag Environment
+							 (<a class='normalLink' href='https://ieeexplore.ieee.org/abstract/document/9307944/' target='__blank'>Read↗</a>)
+						</div>
+						<div class="publisher">IEEE/ACM 9th Workshop on Python for High-Performance and Scientific Computing (PyHPC)</div>
+						<div class="authors">Steven R Brandt, Bita Hasheminezhad, Nanmiao Wu, <b>Sayef Azad Sakin</b>, Alex R Bigelow, Katherine E Isaacs, Kevin Huck, Hartmut Kaiser</div>
+						
+		
+					</div>
+				</div>
+				<div class='separator'></div>
+				<div class='educationBlock'>
+					<div class='educationDate'>
+						2020
+					</div>
+					<div class="educationDetails">
+						<div>
+							Jetlag: An interactive, asynchronous array computing environment
+							 (<a class='normalLink' href='https://dl.acm.org/doi/abs/10.1145/3311790.3396657' target='__blank'>Read↗</a>)
+						</div>
+						<div class="publisher">Practice and Experience in Advanced Research Computing (PEARC)</div>
+						<div class="authors">Steven R Brandt, Alex Bigelow, <b>Sayef Azad Sakin</b>, Katy Williams, Katherine E Isaacs, Kevin Huck, Rod Tohid, Bibek Wagle, Shahrzad Shirzad, Hartmut Kaiser</div>
+						
+		
+					</div>
+				</div>
+				<div class='separator'></div>
+				<div class='educationBlock'>
+					<div class='educationDate'>
+						2017
+					</div>
+					<div class="educationDetails">
+						<div>
+							Self-coexistence among IEEE 802.22 networks: Distributed allocation of power and channel
+							 (<a class='normalLink' href='https://www.mdpi.com/1424-8220/17/12/2838' target='__blank'>Read↗</a>)
+						</div>
+						<div class="publisher">Sensors Journal, MDPI</div>
+						<div class="authors"><b>Sayef Azad Sakin</b>, Md Abdur Razzaque, Mohammad Mehedi Hassan, Atif Alamri, Nguyen H Tran, Giancarlo Fortino</div>
+						
+		
+					</div>
+				</div>
+				<div class='separator'></div>
+			</div>
+		</div>
+		<div id='workBlock' class="sectionBlock">
+			<div class='sectionName'>
+				PROFESSIONAL EXPERIENCE
+			</div>
+			<div class='sectionContent'>
+				<div class='educationBlock'>
+					<div class='educationDate'>
+						Aug 2022 - Present
+					</div>
+					<div class="educationDetails">
+						<div>Graduate Research Assistant</div>
+						<div class='workDetails'>
+							<a class='normalLink' href='https://sci.utah.edu' target='__blank'>
+								University of Utah, Salt Lake City, UT, USA
+							</a>
+						</div>
+		
+					</div>
+				</div>
+				<div class='separator'></div>
+				<div class='educationBlock'>
+					<div class='educationDate'>
+						Jan 2024 - May 2024
+					</div>
+					<div class="educationDetails">
+						<div>Graduate Teaching Assistant (<a href='https://datasciencecourse.net/2024/syllabus/' target='__blank'>Introduction to Data Science</a>)</div>
+						<div class='workDetails'>
+							<a class='normalLink' href='https://sci.utah.edu' target='__blank'>
+								University of Utah, Salt Lake City, UT, USA
+							</a>
+						</div>
+		
+					</div>
+				</div>
+				<div class='separator'></div>
+				<div class='educationBlock'>
+					<div class='educationDate'>
+						Aug 2019 - May 2022
+					</div>
+					<div class="educationDetails">
+						<div>Graduate Research Assistant</div>
+						<div class='workDetails'>
+							<a class='normalLink' href='https://www.cs.arizona.edu/' target='__blank'>
+								University of Arizona, Tucson, AZ, USA
+							</a>
+						</div>
+		
+					</div>
+				</div>
+				<div class='separator'></div>
+				<div class='educationBlock'>
+					<div class='educationDate'>
+						Jun 2024 - Dec 2024
+					</div>
+					<div class="educationDetails">
+						<div>Graduate Student Intern</div>
+						<div class='workDetails'>
+							<a class='normalLink' href='https://www.lanl.gov/engage/collaboration/nsec' target='__blank'>
+								Los Alamos National Laboratory, Los Alamos, NM, USA
+							</a>
+						</div>
+		
+					</div>
+				</div>
+				<div class='separator'></div>
+				<div class='educationBlock'>
+					<div class='educationDate'>
+						Jun 2023 - Aug 2023
+					</div>
+					<div class="educationDetails">
+						<div>PhD Intern</div>
+						<div class='workDetails'>
+							<a class='normalLink' href='https://www.pnnl.gov/' target='__blank'>
+								Pacific Northwest National Laboratory, Remote (Richland, WA, USA)
+							</a>
+						</div>
+		
+					</div>
+				</div>
+				<div class='separator'></div>
+				<div class='educationBlock'>
+					<div class='educationDate'>
+						Jun 2022 - Aug 2022
+					</div>
+					<div class="educationDetails">
+						<div>Visiting Graduate Student</div>
+						<div class='workDetails'>
+							<a class='normalLink' href='https://www.anl.gov/' target='__blank'>
+								Argonne National Laboratory, Remote (Lemont, IL, USA)
+							</a>
+						</div>
+		
+					</div>
+				</div>
+				<div class='separator'></div>
+			</div>
+		</div>
+	</body>
+</html>
