@@ -1,13 +1,14 @@
 {
   "basics": {
     "name": "Sayef Azad Sakin",
-    "label": "Graduate Research Assistant",
+    "label": "PhD Candidate in Computing",
     "image": "images/my_pic.jpg",
     "email": "sayefsakin@sci.utah.edu",
     "phone": "(520)448-8596",
     "url": "https://sayefsakin.github.io",
     "summary": "Data Visualization, Parallel & Distributed Computing, High Performance Computing, Data Management",
-    "industry-summary": "Data Visualization, Data Management, Parallel & Distributed Computing, High Performance Computing",
+    "industrySummary": "Data Visualization, Data Management, Parallel & Distributed Computing, High Performance Computing",
+    "webSummary": "I build software analytics solutions and <br/>help people manage large data.",
     "location": {
       "address": "1034 University Village",
       "postalCode": "84108",
@@ -36,6 +37,13 @@
         "username": "sayefsakin",
         "url": "https://sayefsakin.github.io",
         "logo_path": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Noun_project_Globe_icon_1109009.svg"
+      },
+      {
+        "isShown": false,
+        "network": "Google Scholar",
+        "username": "sayefsakin",
+        "url": "https://scholar.google.com/citations?user=ibQvb0oAAAAJ",
+        "logo_path": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Scholar_logo.svg"
       }
     ]
   },
@@ -47,7 +55,7 @@
       "url": "https://sci.utah.edu",
       "startDate": "2022-08-24",
       "location": "Salt Lake City, UT, USA",
-      "summary": "Invested the scale issue for visualizing large scale trace data generated from parallel program executions. Developed a trace visual analysis tools Traveler and a event sequence data management tool ESeMan."
+      "summary": "Developed solution to address the scale issue in visualizing large scale trace data generated from parallel program executions. Built a trace visual analysis tools Traveler and a event sequence data management tool ESeMan."
     },
     {
       "isShown": true,
@@ -407,6 +415,8 @@
     {
       "isShown": true,
       "name": "Traveler",
+      "demo": "images/TravelerDemo.gif",
+      "detailedDemo": "https://youtu.be/BGMpHgjOo7M",
       "startDate": "2019-08-24",
       "description": "an integrated multi-view visualization platform for analyzing parallel program traces",
       "highlights": [
@@ -420,6 +430,7 @@
     {
       "isShown": true,
       "name": "PerfAnalyzer",
+      "demo": "images/peranalyzer.png",
       "startDate": "2024-06-17",
       "description": "a web-based dashboard to correlate performance changes to source code modifications",
       "highlights": [
@@ -433,6 +444,7 @@
     {
       "isShown": true,
       "name": "AutoProfiler",
+      "demo": "images/autop.png",
       "startDate": "2022-06-06",
       "endDate": "2023-08-11",
       "description": "a scripting tool for performance profiling of supercomputing applications",
@@ -448,6 +460,7 @@
     {
       "isShown": false,
       "name": "WRAN-NS3",
+      "demo": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEikW9y90I0SmuiZr18inr6HNBOtuiDxWjI1dulUriPIR5eZx02Os2Z6OX5DSUJVMJAd15tRMBlU0ZjeolwmpLuEYuaSpHU4eEt3JjuHwM7aEySizsYDGbFNrW4-Kc4Svi_-PXgHhzA0jPs/s1600/network_modelw.jpg",
       "startDate": "2014-01-01 ",
       "endDate": "2016-05-20",
       "description": "A dedicated NS-3 Module for IEEE 802.22 standard",
@@ -456,7 +469,31 @@
         "Enabled assessment, monitoring, and simulation of the network with customizable bandwidth frequency and wireless channel profiles.",
         "Published one journal and one conference paper from the results of this project."
       ],
-      "url": "https://github.com/sayefsakin/dsi/tree/main/tools/perf_analyzer"
+      "url": "https://sayefsakin.github.io/2018-02-02-a-dedicated-ns-3-module-for-ieee-80222/"
+    },
+    {
+      "isShown": false,
+      "name": "IssMan",
+      "demo": "https://issman.com/wp-content/uploads/2015/07/issman-issues-on-the-fly-1030x669.png",
+      "detailedDemo": "https://issman.com/wp-content/uploads/2015/07/issman-screenshot-main.png",
+      "startDate": "2013-05-01",
+      "endDate": "2019-06-30 ",
+      "description": "A punch-list application for onsite quality assurance, inspection, and tracking using photo documentation, drawing annotation, and report distribution.",
+      "highlights": [
+        "Designed responsive UI for cross platform (iOS and Android) mobile application.",
+        "Developed the synchronization module to ensure live update of images and data between server and client applications.",
+        "Managed a java based web server deoployed on Rackspace server and a MySQL database for data storage and retrieval.",
+        "Faciliated and handled user growth to 5000+ business users in 3 years."
+      ],
+      "url": "https://issman.com/"
+    }
+  ],
+  "awards": [
+    {
+      "title": "ICT Fellowship",
+      "date": "2014-01-02",
+      "awarder": "The ministry of ICT, Government of Bangladesh",
+      "summary": "Awarded during my MS study. The Fellowship was awarded for outstanding research work in the field of network information and communication technology."
     }
   ]
 }

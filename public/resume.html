@@ -8,10 +8,10 @@
 	<title>Sayef Azad Sakin</title>
 
 	<style>
-	@font-face {
-    font-family: 'LatoFont'; /*a name to be used later*/
-    src: url('/mnt/d/Projects/personal-web-demo/public/font/font.ttf'); /*URL to font*/
-}
+	/* @font-face {
+    font-family: 'LatoFont';
+    src: url('font/Lato-Regular.ttf');
+} */
 
 body {
     background: #EEEEEE;
@@ -43,7 +43,7 @@ a {
 
 #resume {
     margin: 0 auto;
-    max-width: 600px;
+    max-width: 80%;
     padding: 80px 80px;
     background: #fff;
     border: 1px solid #ccc;
@@ -184,7 +184,7 @@ a {
 .educationDate {
     font-size: x-small;
     color: #000000;
-    margin-top: 2px;
+    margin-top: 3px;
     margin-right: auto;
     margin-left: 0;
     text-align: right;
@@ -277,13 +277,23 @@ blockquote.reference {
     }
 }
 
+.print button {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  color: blue;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+
 @media print {
     body {
         background: #FFFFFF;
     }
     #resume {
         margin: 0 auto;
-        max-width: 600px;
+        max-width: 80%;
         padding: 0px 0px;
         border: 0px;
         background: #fff;
@@ -291,11 +301,14 @@ blockquote.reference {
         -webkit-box-shadow: none;
         /* break-after: avoid;
         break-before: avoid; */
-        break-inside: avoid;
+        break-inside: always;
         /* page-break-inside: avoid; */
     }
     .separator {
         break-after: always;
+    }
+    .print {
+        display: none;
     }
     /* a {
         color: black;
@@ -318,12 +331,16 @@ blockquote.reference {
 				<div class='email'>
 					sayefsakin@sci.utah.edu
 				</div>
+				<div class='print'>
+					<img class='socialLogo' src='https://upload.wikimedia.org/wikipedia/commons/6/63/Yaru-Theme-Icon_%28Ubuntu%29_%E2%80%93_document-print-symbolic.svg' alt=''/>
+					<button onclick="window.print()">Print</button>
+				</div>
 			</div>
 			<div id='nameBlock' class='nameBlock'>
 				<div class='name'>
 					Sayef Azad Sakin
 				</div>
-				<div class='nameBlockLabel'>Graduate Research Assistant</div>
+				<div class='nameBlockLabel'>PhD Candidate in Computing</div>
 			</div>
 			<div id='profilesBlock' class='profileBlock'>
 				<div class='url'>
@@ -341,6 +358,11 @@ blockquote.reference {
 						<img class='socialLogo' src='https://upload.wikimedia.org/wikipedia/commons/d/d9/Noun_project_Globe_icon_1109009.svg' alt='Blog'/> sayefsakin
 					</a>
 				</div>
+				<div class='url'>
+					<a href='https://scholar.google.com/citations?user=ibQvb0oAAAAJ' target='__blank'>
+						<img class='socialLogo' src='https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Scholar_logo.svg' alt='Google Scholar'/> sayefsakin
+					</a>
+				</div>
 			</div>
 		</div>
 		
@@ -351,123 +373,6 @@ blockquote.reference {
 			</div>
 			<div class='sectionContent'>
 				<span>Data Visualization, Parallel &amp; Distributed Computing, High Performance Computing, Data Management</span>
-			</div>
-		</div>
-		<div id='projectsBlock' class="sectionBlock">
-			<div class='sectionName'>
-				<span>RESEARCH PROJECTS</span>
-			</div>
-			<div class='sectionContent'>
-				<div class='educationBlock'>
-					<div class='educationDate'>
-						Dec 2023 - Present
-					</div>
-					<div class="educationDetails">
-						<div>
-							<a href='https://github.com/sayefsakin/eseman' target='__blank'>
-								ESeMan</a>, <span style='font-size:x-small'>an Event Sequence MANager for interactive visual analysis of events with tunable accuracy</span>
-						</div>
-						<ul class='highlights'>
-							<li>Developed a data management system to address the challenge of balancing interactive performance and visual accuracy in visualizing large number of events.</li>
-							<li>Built interfacing to generate event summaries with varying visual accuracy.</li>
-							<li>Achieved sub-100ms interactive response time while maintaining pixel-perfect visual accuracy.</li>
-							<li>Published the results of this project as a full paper at IEEE LDAV 2025 workshop.</li>
-						</ul>
-					</div>
-				</div>
-				<div class='separator'></div>
-				<div class='educationBlock'>
-					<div class='educationDate'>
-						Aug 2019 - Present
-					</div>
-					<div class="educationDetails">
-						<div>
-							<a href='https://github.com/sayefsakin/traveler-integrated/tree/data-structure-comp' target='__blank'>
-								Traveler</a>, <span style='font-size:x-small'>an integrated multi-view visualization platform for analyzing parallel program traces</span>
-						</div>
-						<ul class='highlights'>
-							<li>Developed a visualization system to analyze trace data collected from a distributed array toolkit running a C++ runtime system.</li>
-							<li>Designed web-based interactive node-link diagram, scalable time-series charts, and RESTful API backend.</li>
-							<li>Enable faster navigation on large traces and easier identification of performance bottlenecks through interactive visualizations.</li>
-							<li>Published a full paper (IEEE VIS 2022), a short paper (IEEE VIS 2024), and three workshop papers based on the results of this project.</li>
-						</ul>
-					</div>
-				</div>
-				<div class='separator'></div>
-				<div class='educationBlock'>
-					<div class='educationDate'>
-						Jun 2024 - Present
-					</div>
-					<div class="educationDetails">
-						<div>
-							<a href='https://github.com/sayefsakin/dsi/tree/main/tools/perf_analyzer' target='__blank'>
-								PerfAnalyzer</a>, <span style='font-size:x-small'>a web-based dashboard to correlate performance changes to source code modifications</span>
-						</div>
-						<ul class='highlights'>
-							<li>Developed a web-based dashboard, using Plotly and DASH, to correlate scientific software performance changes with source code modifications.</li>
-							<li>Built an interfacing with MySQL database that enabled a flexible performance data storage with user-friendly query interface.</li>
-							<li>Faciliatated automated performance data collection from multiple Git commits with different input configurations.</li>
-							<li>Submitted a short paper at the PMBS 2025 workshop highlighting the benefits of integrating Git metadata in the performance analysis workflow.</li>
-						</ul>
-					</div>
-				</div>
-				<div class='separator'></div>
-				<div class='educationBlock'>
-					<div class='educationDate'>
-						Jun 2022 - Aug 2023
-					</div>
-					<div class="educationDetails">
-						<div>
-							<a href='https://github.com/pnnl/ExaGO/tree/develop/performance_analysis' target='__blank'>
-								AutoProfiler</a>, <span style='font-size:x-small'>a scripting tool for performance profiling of supercomputing applications</span>
-						</div>
-						<ul class='highlights'>
-							<li>Automated the overall performance analysis pipeline of the <a href='https://github.com/pnnl/ExaGO' targe='__blank'>ExaGO</a>, a collection of software packages for solving power grid optimization problems.</li>
-							<li>Enabled multi-platform (CPU, GPU) profiling by easy integration with TAU, HPCToolkit, and Nvidia Nsight.</li>
-							<li>Enabled easy configuration of different profiling setups and software versions leveraging the Spack package manager.</li>
-							<li>Designed scripts to estimate the strong and weak scaling measurements of ExaGO on different Supercomputing platforms.</li>
-							<li>Presented a poster on the impacts of this project at the ECP23 annual meeting.</li>
-						</ul>
-					</div>
-				</div>
-				<div class='separator'></div>
-			</div>
-		</div>
-		<div id='skills' class="sectionBlock">
-			<div class='sectionName'>
-				<div>TECHNICAL SKILLS</div>
-			</div>
-			<div class='sectionContent'>
-				<div style="font-size:xx-small; text-align: center;" >(Left to Right - Highest to Lowest Proficiency)</div>
-				<div class='skillBlock'>
-					<span class='title'>Programming Languages:</span>
-					<span>Python</span>, 
-					<span>C</span>, 
-					<span>C++</span>, 
-					<span>BASH</span>, 
-					<span>SQL</span>, 
-					<span>Javascript</span>, 
-					<span>Java</span>, 
-					<span>Objective C</span>
-				</div>
-				<div class='skillBlock'>
-					<span class='title'>Data Analysis Packages:</span>
-					<span>NumPy</span>, 
-					<span>Pandas</span>, 
-					<span>CGAL</span>, 
-					<span>SciPy</span>, 
-					<span>scikit-learn</span>, 
-					<span>MATLAB</span>
-				</div>
-				<div class='skillBlock'>
-					<span class='title'>Visualization Tools:</span>
-					<span>D3.js</span>, 
-					<span>Plotly</span>, 
-					<span>Dash</span>, 
-					<span>Matplotlib</span>, 
-					<span>Seaborn</span>, 
-					<span>ggplot2</span>
-				</div>
 			</div>
 		</div>
 		<div id='education' class="sectionBlock">
@@ -648,13 +553,209 @@ blockquote.reference {
 					</div>
 				</div>
 				<div class='separator'></div>
+				<div class='educationBlock'>
+					<div class='educationDate'>
+						2016
+					</div>
+					<div class="educationDetails">
+						<div>
+							Game theoretic downlink resource scheduling for self-coexisting cognitive radio networks
+							 (<a class='normalLink' href='https://ieeexplore.ieee.org/abstract/document/7400697/' target='__blank'>Read↗</a>)
+						</div>
+						<div class="publisher">International Conference on Networking Systems and Security (NSysS)</div>
+						<div class="authors"><b>Sayef Azad Sakin</b>, Abdur Razzaque</div>
+						
+		
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		<div id='projectsBlock' class="sectionBlock">
+			<div class='sectionContent'>
+				<div class='sectionName'>
+					PROJECTS
+				</div>
+				<div class='educationBlock'>
+					<div class='educationDate'>
+						Dec 2023 - Present
+					</div>
+					<div class="educationDetails">
+						<div>
+							<a href='https://github.com/sayefsakin/eseman' target='__blank'>
+								ESeMan</a>, <span style='font-size:x-small'>an Event Sequence MANager for interactive visual analysis of events with tunable accuracy</span>
+						</div>
+						<ul class='highlights'>
+							<li>Developed a data management system to address the challenge of balancing interactive performance and visual accuracy in visualizing large number of events.</li>
+							<li>Built interfacing to generate event summaries with varying visual accuracy.</li>
+							<li>Achieved sub-100ms interactive response time while maintaining pixel-perfect visual accuracy.</li>
+							<li>Published the results of this project as a full paper at IEEE LDAV 2025 workshop.</li>
+						</ul>
+					</div>
+				</div>
+				<div class='separator'></div>
+				<div class='educationBlock'>
+					<div class='educationDate'>
+						Aug 2019 - Present
+					</div>
+					<div class="educationDetails">
+						<div>
+							<a href='https://github.com/sayefsakin/traveler-integrated/tree/data-structure-comp' target='__blank'>
+								Traveler</a>, <span style='font-size:x-small'>an integrated multi-view visualization platform for analyzing parallel program traces</span>
+						</div>
+						<ul class='highlights'>
+							<li>Developed a visualization system to analyze trace data collected from a distributed array toolkit running a C++ runtime system.</li>
+							<li>Designed web-based interactive node-link diagram, scalable time-series charts, and RESTful API backend.</li>
+							<li>Enable faster navigation on large traces and easier identification of performance bottlenecks through interactive visualizations.</li>
+							<li>Published a full paper (IEEE VIS 2022), a short paper (IEEE VIS 2024), and three workshop papers based on the results of this project.</li>
+						</ul>
+					</div>
+				</div>
+				<div class='separator'></div>
+				<div class='educationBlock'>
+					<div class='educationDate'>
+						Jun 2024 - Present
+					</div>
+					<div class="educationDetails">
+						<div>
+							<a href='https://github.com/sayefsakin/dsi/tree/main/tools/perf_analyzer' target='__blank'>
+								PerfAnalyzer</a>, <span style='font-size:x-small'>a web-based dashboard to correlate performance changes to source code modifications</span>
+						</div>
+						<ul class='highlights'>
+							<li>Developed a web-based dashboard, using Plotly and DASH, to correlate scientific software performance changes with source code modifications.</li>
+							<li>Built an interfacing with MySQL database that enabled a flexible performance data storage with user-friendly query interface.</li>
+							<li>Faciliatated automated performance data collection from multiple Git commits with different input configurations.</li>
+							<li>Submitted a short paper at the PMBS 2025 workshop highlighting the benefits of integrating Git metadata in the performance analysis workflow.</li>
+						</ul>
+					</div>
+				</div>
+				<div class='separator'></div>
+				<div class='educationBlock'>
+					<div class='educationDate'>
+						Jun 2022 - Aug 2023
+					</div>
+					<div class="educationDetails">
+						<div>
+							<a href='https://github.com/pnnl/ExaGO/tree/develop/performance_analysis' target='__blank'>
+								AutoProfiler</a>, <span style='font-size:x-small'>a scripting tool for performance profiling of supercomputing applications</span>
+						</div>
+						<ul class='highlights'>
+							<li>Automated the overall performance analysis pipeline of the <a href='https://github.com/pnnl/ExaGO' targe='__blank'>ExaGO</a>, a collection of software packages for solving power grid optimization problems.</li>
+							<li>Enabled multi-platform (CPU, GPU) profiling by easy integration with TAU, HPCToolkit, and Nvidia Nsight.</li>
+							<li>Enabled easy configuration of different profiling setups and software versions leveraging the Spack package manager.</li>
+							<li>Designed scripts to estimate the strong and weak scaling measurements of ExaGO on different Supercomputing platforms.</li>
+							<li>Presented a poster on the impacts of this project at the ECP23 annual meeting.</li>
+						</ul>
+					</div>
+				</div>
+				<div class='separator'></div>
+				<div class='educationBlock'>
+					<div class='educationDate'>
+						Jan 2014 - May 2016
+					</div>
+					<div class="educationDetails">
+						<div>
+							<a href='https://sayefsakin.github.io/2018-02-02-a-dedicated-ns-3-module-for-ieee-80222/' target='__blank'>
+								WRAN-NS3</a>, <span style='font-size:x-small'>A dedicated NS-3 Module for IEEE 802.22 standard</span>
+						</div>
+						<ul class='highlights'>
+							<li>Developed a dedicated Network Simulator 3 (NS-3) module for wireless regional area networks.</li>
+							<li>Enabled assessment, monitoring, and simulation of the network with customizable bandwidth frequency and wireless channel profiles.</li>
+							<li>Published one journal and one conference paper from the results of this project.</li>
+						</ul>
+					</div>
+				</div>
+				<div class='separator'></div>
+				<div class='educationBlock'>
+					<div class='educationDate'>
+						Apr 2013 - Jun 2019
+					</div>
+					<div class="educationDetails">
+						<div>
+							<a href='https://issman.com/' target='__blank'>
+								IssMan</a>, <span style='font-size:x-small'>A punch-list application for onsite quality assurance, inspection, and tracking using photo documentation, drawing annotation, and report distribution.</span>
+						</div>
+						<ul class='highlights'>
+							<li>Designed responsive UI for cross platform (iOS and Android) mobile application.</li>
+							<li>Developed the synchronization module to ensure live update of images and data between server and client applications.</li>
+							<li>Managed a java based web server deoployed on Rackspace server and a MySQL database for data storage and retrieval.</li>
+							<li>Faciliated and handled user growth to 5000+ business users in 3 years.</li>
+						</ul>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		<div id='skills' class="sectionBlock">
+			<div class='sectionName'>
+				<div>TECHNICAL SKILLS</div>
+			</div>
+			<div class='sectionContent'>
+				<div style="font-size:xx-small; text-align: center;" >(Left to Right - Highest to Lowest Proficiency)</div>
+				<div class='skillBlock'>
+					<span class='title'>Programming Languages:</span>
+					<span>Python</span>, 
+					<span>C</span>, 
+					<span>C++</span>, 
+					<span>BASH</span>, 
+					<span>SQL</span>, 
+					<span>Javascript</span>, 
+					<span>Java</span>, 
+					<span>Objective C</span>
+				</div>
+				<div class='skillBlock'>
+					<span class='title'>Data Analysis Packages:</span>
+					<span>NumPy</span>, 
+					<span>Pandas</span>, 
+					<span>CGAL</span>, 
+					<span>SciPy</span>, 
+					<span>scikit-learn</span>, 
+					<span>MATLAB</span>
+				</div>
+				<div class='skillBlock'>
+					<span class='title'>Visualization Tools:</span>
+					<span>D3.js</span>, 
+					<span>Plotly</span>, 
+					<span>Dash</span>, 
+					<span>Matplotlib</span>, 
+					<span>Seaborn</span>, 
+					<span>ggplot2</span>
+				</div>
+				<div class='skillBlock'>
+					<span class='title'>Databases:</span>
+					<span>MySQL</span>, 
+					<span>SQLite</span>, 
+					<span>DuckDB</span>, 
+					<span>PostgreSQL</span>
+				</div>
+				<div class='skillBlock'>
+					<span class='title'>Big Data Technologies:</span>
+					<span>Hadoop</span>, 
+					<span>MapReduce</span>, 
+					<span>Spark</span>
+				</div>
+				<div class='skillBlock'>
+					<span class='title'>Cloud &amp; DevOps:</span>
+					<span>AWS</span>, 
+					<span>Docker</span>, 
+					<span>GitHub Actions</span>, 
+					<span>CI/CD</span>
+				</div>
+				<div class='skillBlock'>
+					<span class='title'>Web Technologies:</span>
+					<span>HTML5</span>, 
+					<span>CSS3</span>, 
+					<span>Flask</span>, 
+					<span>Node.js</span>, 
+					<span>Vite</span>
+				</div>
 			</div>
 		</div>
 		<div id='workBlock' class="sectionBlock">
-			<div class='sectionName'>
-				PROFESSIONAL EXPERIENCE
-			</div>
 			<div class='sectionContent'>
+				<div class='sectionName'>
+					PROFESSIONAL EXPERIENCE
+				</div>
 				<div class='educationBlock'>
 					<div class='educationDate'>
 						Aug 2022 - Present
@@ -702,6 +803,24 @@ blockquote.reference {
 				<div class='separator'></div>
 				<div class='educationBlock'>
 					<div class='educationDate'>
+						Jan 2016 - Jun 2019
+					</div>
+					<div class="educationDetails">
+						<div>Software Engineer</div>
+						<div class='workDetails'>
+							<a class='normalLink' href='https://www.linkedin.com/company/structured-data-systems-limited/' target='__blank'>
+								Structured Data Systems Limited, Dhaka, Bangladesh
+							</a>
+						</div>
+		
+					</div>
+				</div>
+				
+				<div class='sectionName'>
+					INTERNSHIP EXPERIENCE
+				</div>
+				<div class='educationBlock'>
+					<div class='educationDate'>
 						Jun 2024 - Dec 2024
 					</div>
 					<div class="educationDetails">
@@ -745,6 +864,184 @@ blockquote.reference {
 					</div>
 				</div>
 				<div class='separator'></div>
+				<div class='educationBlock'>
+					<div class='educationDate'>
+						May 2020 - Aug 2020
+					</div>
+					<div class="educationDetails">
+						<div>Student Developer</div>
+						<div class='workDetails'>
+							<a class='normalLink' href='https://summerofcode.withgoogle.com/' target='__blank'>
+								Google Summer of Code program, Remote (Louisiana State University, USA)
+							</a>
+						</div>
+		
+					</div>
+				</div>
+				<div class='separator'></div>
+				<div class='educationBlock'>
+					<div class='educationDate'>
+						Apr 2013 - Jan 2016
+					</div>
+					<div class="educationDetails">
+						<div>Junior Software Engineer (Part Time)</div>
+						<div class='workDetails'>
+							<a class='normalLink' href='https://www.linkedin.com/company/structured-data-systems-limited/' target='__blank'>
+								Structured Data Systems Limited, Dhaka, Bangladesh
+							</a>
+						</div>
+		
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		<div id='volunteer' class="sectionBlock">
+			<div class='sectionContent'>
+				<div class='sectionName'>
+					VOLUNTEERING
+				</div>
+				<div class='educationBlock'>
+					<div class='educationDate'>
+						Nov 2024
+					</div>
+					<div class="educationDetails">
+						<div>Lead Student Volunteer</div>
+						<div class='workDetails'>
+							<a class='normalLink' href='https://sc24.supercomputing.org/' target='__blank'>
+								The Supercomputing Conference, Atlanta, GA, USA
+							</a>
+						</div>
+						<div class='workDetails'>
+							Digital Experience, Reproducibility, and HPC Immersion committees
+						</div>
+					</div>
+				</div>
+				<div class='separator'></div>
+				<div class='educationBlock'>
+					<div class='educationDate'>
+						Nov 2023
+					</div>
+					<div class="educationDetails">
+						<div>Lead Student Volunteer</div>
+						<div class='workDetails'>
+							<a class='normalLink' href='https://sc23.supercomputing.org/' target='__blank'>
+								The Supercomputing Conference, Denver, CO, USA
+							</a>
+						</div>
+						<div class='workDetails'>
+							Tutorials Committee, Acting Judge for SciViz Showcase
+						</div>
+					</div>
+				</div>
+				<div class='separator'></div>
+				<div class='educationBlock'>
+					<div class='educationDate'>
+						Nov 2022
+					</div>
+					<div class="educationDetails">
+						<div>Student Volunteer</div>
+						<div class='workDetails'>
+							<a class='normalLink' href='https://sc22.supercomputing.org/' target='__blank'>
+								The Supercomputing Conference, Dallas, TX, USA
+							</a>
+						</div>
+						<div class='workDetails'>
+							Room monitoring, Session chair and presenter assistance
+						</div>
+					</div>
+				</div>
+				<div class='separator'></div>
+				<div class='educationBlock'>
+					<div class='educationDate'>
+						Oct 2022
+					</div>
+					<div class="educationDetails">
+						<div>Student Volunteer</div>
+						<div class='workDetails'>
+							<a class='normalLink' href='https://ieeevis.org/year/2022/welcome' target='__blank'>
+								IEEE VIS: Visualization &amp; Visual Analytics, Oaklahoma City, OK, USA
+							</a>
+						</div>
+						<div class='workDetails'>
+							Room monitoring, Session chair and presenter assistance, and Help desk
+						</div>
+					</div>
+				</div>
+				<div class='separator'></div>
+				<div class='educationBlock'>
+					<div class='educationDate'>
+						Nov 2021
+					</div>
+					<div class="educationDetails">
+						<div>Student Volunteer</div>
+						<div class='workDetails'>
+							<a class='normalLink' href='https://sc21.supercomputing.org/' target='__blank'>
+								The Supercomputing Conference, St. Louis, MO, USA (Virtual)
+							</a>
+						</div>
+						<div class='workDetails'>
+							Remote session chair and presenter assistance, Monitoring online platforms
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		<div id='certificates'>
+			<div class='sectionName'>
+				<span>CERTIFICATES</span>
+			</div>
+			<div class='sectionContent'>
+				<div class='educationBlock'>
+					<div class='educationDate'>
+						Jan 2014
+					</div>
+					<div class="educationDetails">
+						<div>Machine Learning by Andrew Ng</div>
+						<div class='workDetails'>
+							<a class='normalLink' href='https://drive.google.com/file/d/0B0z3pydRORw2eW9icWFYZnI1bk0/edit?usp=sharing' target='__blank'>
+								Stanford University
+							</a>
+						</div>
+						
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		<div id='awards' class="sectionBlock">
+			<div class='sectionContent'>
+				<div class='sectionName'>
+					AWARDS
+				</div>
+				<div class='educationBlock'>
+					<div class='educationDate'>
+						Jan 2014
+					</div>
+					<div class="educationDetails">
+						<div>ICT Fellowship</div>
+						<div class='workDetails'>
+							<div>The ministry of ICT, Government of Bangladesh</div>
+							<div>Awarded during my MS study. The Fellowship was awarded for outstanding research work in the field of network information and communication technology.</div>
+						</div>
+						
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		<div id='languages' class="sectionBlock">
+			<div class='sectionName'>
+				<span>LANGUAGES</span>
+			</div>
+			<div class='sectionContent'>
+				<span class='language'>English</span>
+				<span class='fluency'><em>(Fluent)</em></span>
+				<span>,</span>
+				<span class='language'>Bengali</span>
+				<span class='fluency'><em>(Native speaker)</em></span>
+				
 			</div>
 		</div>
 	</body>
